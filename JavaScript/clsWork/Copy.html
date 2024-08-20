@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title></title>
+        <script>
+            function copy(f) {
+          f.field2.value = f.field1.value;
+          return f.field2;
+            }
+        </script>
+    </head>
+    <body>
+        <form>
+        <input type="text" name="field1">
+        <input type="text" name="field2">
+        <input type="button" value="click" onclick="copy(this.form)">
+    </form>
+    </body>
+</html>
+
+
+ 
+

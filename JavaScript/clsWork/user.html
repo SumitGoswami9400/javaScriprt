@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>MyForm</title>
+        <script>
+  function check()
+ {
+ var n=document.getElementById("username").value;
+ var p=document.getElementById("Password").value;
+ var nm="admin";
+ var pass="1234567";
+if(n=="" || n==null)
+{
+    alert("please enter ur name");
+    return (false);
+}
+if(p.length<4)
+{
+    alert("please enter a password");
+    return(false);
+}
+if(n==nm){
+    alert("name is match by admin");
+}
+if(p==pass){
+alert("password is match by admin password");
+}
+}
+function clr()
+{
+var n=document.getElementById("username");
+var p=document.getElementById("Password");
+p.value="";
+n.value="";
+}
+        </script>
+    </head>
+
+
+    <body>
+        <form name="MyForm">
+                Name:
+                <input type="text" id="username" value="name" >
+                Password:
+                <input type="text" id="Password" value="pass">
+                <input type="button" value="login" onclick="check()">
+                <input type="button" value="clr" onclick="clr()">
+        </form>
+    </body>
+</html>

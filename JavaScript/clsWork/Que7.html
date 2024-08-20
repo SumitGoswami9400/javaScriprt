@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title></title>
+    </head>
+    <script>
+      function name(){
+        var n=prompt("Enter your name");
+        var uprcase=0;
+        var lwrcase=0;
+     for(i=0; i<n.length; i++){
+if((n.charCodeAt(i)>=97 && n.charCodeAt(i)<=122) || n.charCodeAt(i)==32){
+
+}else{
+    uprcase++;
+}
+if((n.charCodeAt(i)>=65 && n.charCodeAt(i)<=90) || n.charCodeAt(i)==32){
+
+}else{
+    lwrcase++;
+}
+   }
+if(uprcase==0){
+    alert(n.toUpperCase())
+}
+else if(lwrcase==0){
+    alert(n.toLowerCase())
+}
+else{
+    alert("Name consists lower and upper case both");
+}
+
+        }
+      
+      name();
+    </script>
+    <body>
+
+    </body>
+</html>

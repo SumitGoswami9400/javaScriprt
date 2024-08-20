@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Validation</title>
+    <style>
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h2>Login Form</h2>
+    <form id="loginForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username"><br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password"><br><br>
+        <input type="button" value="Login" onclick="validateForm()">
+    </form>
+    <p id="error-message" class="error"></p>
+
+    <script>
+        const validUsername = "user123";
+        const validPassword = "pass123";
+
+        function validateForm() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            const errorMessage = document.getElementById('error-message');
+
+            errorMessage.textContent = '';
+
+            if (username === '' || password === '') {
+                errorMessage.textContent = 'Username and password cannot be left blank.';
+                return;
+            }
+
+            if (username === validUsername && password === validPassword) {
+                alert('Login successful!');
+            } else {
+                errorMessage.textContent = 'Invalid username or password.';
+            }
+        }
+    </script>
+</body>
+</html>

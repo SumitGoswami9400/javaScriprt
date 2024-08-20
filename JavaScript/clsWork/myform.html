@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <title>Document</title>
+</head>
+<script>
+    function validate()
+    {
+        var n=document.myform.name.value;
+        var a=document.myform.Age.value;
+        var g=document.myform.gender.value;
+        if(n=="" || n==null)
+        {
+            alert("Please write something");
+            return (false);
+        }
+        if(A.length>3)
+        {
+            alert("age cant exceed");
+            return (false);
+        }
+        if(g=="select")
+        {
+            alert("please select any gender");
+            return (false);
+        }
+    }
+</script>
+
+<body>
+    <form name="myform" onsubmit="return validate()">
+Name:
+<input type="text" name="name">
+Age:
+<input type="text" name="Age">
+Gender:
+<select name="gender">
+    <option value="select" >Select</option>
+    <option value="male">Male</option>
+    <option value="female">Female</option>
+    <option value="other">other</option>
+</select>
+<input type="submit" value="check">
+
+    </form>
+</body>
+</html>
+
+
+
+
+

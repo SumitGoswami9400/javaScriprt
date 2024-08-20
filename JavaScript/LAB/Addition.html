@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>Add Automatic</title>
+        <script>
+function add(){
+    var a=parseInt(document.getElementById('num1').value);
+    var b=parseInt(document.getElementById("num2").value);
+    var res=(document.getElementById("res"));
+    var sum=a+b
+        res.value=sum
+   
+}
+
+        </script>
+    </head>
+
+    
+    <body>
+<input type="text" name="" id="num1" oninput="add()" > + <input type="text" name="" oninput="add()" id="num2"> = <input type="text" id="res" readonly >
+    </body>
+</html>

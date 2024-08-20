@@ -1,0 +1,56 @@
+<!-- Que4:-Write the html and JavaScript code for validate user users input 
+username and password if it is match than show massage login successfully if not 
+then show invalid username or password. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function check() {
+    var n = document.getElementById("username").value;
+    var p = document.getElementById("password").value;
+    var us = "Sumit";
+    var pw = "123"; 
+
+    if (n === "" || n == null) {
+        alert("Please enter the Username");
+        return;
+    }
+
+    if (p === "" || p == null) {
+        alert("Please enter the Password");
+        return;
+    }
+
+    if (n === us && p === pw) {
+        alert("Login successfully");
+    } else {
+        alert("Invalid username or password");
+    }
+}
+
+function reset() {
+    document.getElementById("username").value = "";
+    document.getElementById("password").value = "";
+}
+</script>
+</head>
+<body>
+<form name="myform">
+<table>
+<tr>
+    <td>Username</td>
+    <td><input type="text" id="username"></td>
+</tr>
+<tr>
+    <td>Password</td>
+    <td><input type="password" id="password"></td>
+</tr>
+<tr>
+    <td><input type="button" value="Login" onclick="check()"></td>
+    <td><input type="button" value="Clear" onclick="reset()"></td>
+</tr>
+</table>
+</form>
+</body>
+</html>

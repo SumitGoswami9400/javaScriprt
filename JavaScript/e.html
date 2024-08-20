@@ -1,0 +1,17 @@
+<html> 
+    <head> 
+        <title>auto addition</title> 
+    </head>    
+     <body> 
+        <input type="text" name="" id="num1" oninput="add()" placeholder="Enter first number"> +<input type="text" name="" id="num2" oninput="add()"placeholder="Enter second number"> = <input type="text" name="" id="result" placeholder="result"> 
+    </body> 
+</html>
+ <script>    
+     function add(){     
+    let a = parseInt(document.getElementById("num1").value)     
+        let b = parseInt(document.getElementById("num2").value)   
+              let res = document.getElementById("result")    
+                   let sum = a + b 
+        res.value = sum 
+    } 
+</script>

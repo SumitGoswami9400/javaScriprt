@@ -1,0 +1,62 @@
+<html>
+
+<head>
+    <script>
+        function analyzeString() {
+            let inputString = prompt("Enter a string:");
+
+            if (inputString !== null) {
+                let uppercaseCount = 0;
+                let lowercaseCount = 0;
+                let spaceCount = 0;
+                let specialCharCount = 0;
+                let digitCount = 0;
+                let alphabetCount = 0;
+                let totalLength = inputString.length;
+
+                for (let i = 0; i < inputString.length; i++) {
+                    let char = inputString.charAt(i); if (char >= 'A' && char <= 'Z') {
+                        uppercaseCount++; alphabetCount++;
+                    }
+                    else if (char >= 'a' && char <= 'z') {
+                        lowercaseCount++; alphabetCount++;
+                    }
+                    else if (char === ' ') {
+                        spaceCount++;
+                    } else if (char >= '0' && char <= '9') {
+
+                        digitCount++;
+                    } else {
+                        specialCharCount++;
+                    }
+                }
+
+                // Display the results 
+                document.getElementById("uppercaseCount").innerText = "Uppercase characters: " + uppercaseCount;
+
+                document.getElementById("lowercaseCount").innerText = "Lowercase characters: " + lowercaseCount;
+                document.getElementById("spaceCount").innerText = "Spaces: " + spaceCount;
+                document.getElementById("specialCharCount").innerText = "Special characters: " + specialCharCount;
+                document.getElementById("digitCount").innerText = "Digits: " + digitCount;
+                document.getElementById("alphabetCount").innerText = "Total alphabets: " + alphabetCount;
+                document.getElementById("totalLength").innerText = "Total length: " + totalLength;
+            } else {
+                document.getElementById("result").innerText = "No input provided.";
+            }
+        } 
+    </script>
+</head>
+
+<body onload="analyzeString()">
+    <h1>String Analysis</h1>
+    <p id="uppercaseCount"></p>
+    <p id="lowercaseCount"></p>
+    <p id="spaceCount"></p>
+    <p id="specialCharCount"></p>
+    <p id="digitCount"></p>
+    <p id="alphabetCount"></p>
+    <p id="totalLength"></p>
+    <p id="result"></p>
+</body>
+
+</html>

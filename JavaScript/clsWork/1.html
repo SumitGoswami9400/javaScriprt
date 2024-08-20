@@ -1,0 +1,23 @@
+<!-- Que1:- Write a program in JavaScript to perform arithmetic operators using variable initialization. --> 
+
+<html>
+<head>
+<script>
+function maths(){
+let a=parseInt(document.getElementById("n1").value);
+let b=parseInt(document.getElementById("n2").value);
+document.write("Add: ",(a+b),"<br>");
+document.write("Sub: ",(a-b),"<br>");
+document.write("Multiply: ",(a*b),"<br>");
+document.write("Divide: ",(a/b),"<br>");
+}
+</script>
+</head>
+<body>
+Enter number first
+<input type="text" id="n1">
+Enter number second
+<input type="text" id="n2">
+<input type="button" value="click" onclick="maths()">
+</body>
+</html>

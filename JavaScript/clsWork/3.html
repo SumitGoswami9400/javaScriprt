@@ -1,0 +1,65 @@
+<!-- <Que4:->>Write a program in JavaScript to perform arithmetic operators and the input taken from input tag.
+
+<html>
+<head>
+<script>
+function maths(){
+let a=parseInt(document.getElementById("n1").value);
+let b=parseInt(document.getElementById("n2").value);
+document.write("Add: ",(a+b),"<br>");
+document.write("Sub: ",(a-b),"<br>");
+document.write("Multiply: ",(a*b),"<br>");
+document.write("Divide: ",(a/b),"<br>");
+}
+</script>
+</head>
+<body>
+Enter number first
+<input type="text" id="n1">
+Enter number second
+<input type="text" id="n2">
+<input type="button" value="click" onclick="maths()">
+</body>
+</html> -->
+
+
+<html>
+<head>
+<script>
+function add()
+{
+var a=prompt("enter 1 no.");
+var b=prompt("enter 2 no.");
+var add=parseInt(a)+parseInt(b);
+alert(add);
+}
+add();
+function sub()
+{
+var a=prompt("enter 1 no.");
+var b=prompt("enter 2 no.");
+var sub=a-b;
+alert(sub);
+}
+sub();
+function mul()
+{
+var a=prompt("enter 1 no.");
+var b=prompt("enter 2 no.");
+var mul=a*b;
+alert(mul);
+}
+mul();
+function div()
+{
+var a=prompt("enter 1 no.");
+var b=prompt("enter 2 no.");
+var div=a/b;
+alert(div);
+}
+div();
+</script>
+</head>
+<body>
+</body>
+</html>

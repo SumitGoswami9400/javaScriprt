@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Number Checker</title>
+</head>
+<body>
+    <h2>Prime Number Checker</h2>
+    <p>Enter a number below to see if it's a prime number:</p>
+    <input type="text" id="number" placeholder="Enter a number" oninput="checkPrime()">
+    <p id="result"></p>
+
+    <script>
+        function checkPrime(){
+            var nm=document.getElementById('number').value;
+            var rs=document.getElementById('result');
+            for(var i=0;i<nm;i++){
+                if(nm%i==0){
+       rs.innerHTML='is prime number';
+                }
+                else{
+                    rs.innerHTML='is not a prime number';
+                }
+            }
+        }
+    </script>
+</body>
+</html>

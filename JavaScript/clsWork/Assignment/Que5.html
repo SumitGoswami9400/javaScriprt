@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>
+        </title>
+    <style>
+        #Cordinates{
+            font-size: 18px;
+            margin-top: 20px;
+        }
+    </style>
+    </head>
+    <body>
+        <h2>Mouse Cordinates</h2>
+        <div id="Cordinates"></div>
+        <script>
+document.addEventListener('mousemove', function(event){
+// Client Cordinate(relative to the viewport)
+var clientX=event.clientX;
+var clientY=event.clientY;
+
+// Page Coordinates (relatives to the whole page)
+var pageX=event.pageX;
+var pageY=event.pageY;
+
+// Screen Coordinates (relatives to the Screen)
+var screenX=event.screenX;
+var screenY=event.screenY;
+
+// Display Coordinate
+var coordinateDiv=document.getElementById('Cordinates');
+coordinateDiv.innerHTML = `
+    <p>Client Cordinates(viewport): (${clientX}, ${clientY})</p>
+    <p>Page Cordinate(Document): (${pageX}, ${pageY})</p>
+    <p>Screen Cordinate: (${screenX}, ${screenY})</p>
+    `;
+
+});
+
+        </script>
+    </body>
+</html>
